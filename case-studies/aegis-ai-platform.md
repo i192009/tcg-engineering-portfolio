@@ -20,7 +20,7 @@ Developed gateway request handling, tenant-scoped idempotency, provider routing 
 This is a simplified component view for discussing engineering decisions. It omits internal endpoints, configuration and deployment details.
 
 - Authenticated clients submit requests through the gateway.
-- Tenant policy, admission controls and budget reservations bound execution.
+- Tenant policy and Redis admission controls bound execution; PostgreSQL holds request state and budget reservations.
 - Provider routing handles completion and streaming attempts.
 - Durable events and queued evaluation work support recovery and inspection.
 
